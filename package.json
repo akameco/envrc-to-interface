@@ -6,12 +6,14 @@
   "repository": "akameco/envrc-to-interface",
   "author": "akameco <akameco.t@gmail.com> (https://akameco.github.io)",
   "files": [
-    "dest"
+    "dest",
+    "cli.js"
   ],
+  "bin": "cli.js",
   "main": "dest/index.js",
   "types": "dest/index.d.ts",
   "keywords": [
-    ""
+    "envrc"
   ],
   "engines": {
     "node": ">=10"
@@ -25,11 +27,8 @@
     "test": "jest",
     "test:ci": "jest --coverage --ci --runInBand"
   },
-  "dependencies": {},
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
+  "dependencies": {
+    "meow": "^6.1.0"
   },
   "devDependencies": {
     "@akameco/tsconfig": "^0.4.0",
@@ -44,5 +43,10 @@
     "prettier": "^2.0.4",
     "ts-jest": "^25.3.1",
     "typescript": "^3.8.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }
