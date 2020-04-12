@@ -1,49 +1,34 @@
 # envrc-to-interface
+
 [![Build Status](https://travis-ci.com/akameco/envrc-to-interface.svg?branch=master)](https://travis-ci.com/akameco/envrc-to-interface)
 [![tested with jest](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://github.com/facebook/jest)
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 > your .envrc to TypeScript interface
 
-
-## Install
-
-```
-$ npm install envrc-to-interface
-$ yarn add envrc-to-interface
-```
-
-
 ## Usage
 
-```js
-const envrcToInterface = require('envrc-to-interface');
+```sh
+$ cat .envrc
+export TOKEN=dffsgdhfdsfgdfasdaf
 
-envrcToInterface('unicorns');
-//=> 'unicorns & rainbows'
+$ npx envrc-to-interface .envrc
+
+declare namespace NodeJS {
+  interface ProcessEnv {
+    readonly TOKEN: string;
+  }
+}
 ```
 
+Run:
 
-## API
-
-### `envrcToInterface(input, [options])`
-
-#### input
-
-Type: `string`
-
-Lorem ipsum.
-
-#### options
-
-##### foo
-
-Type: `boolean`<br>
-Default: `false`
-
-Lorem ipsum.
+```sh
+$ npx envrc-to-interface .envrc >> env.d.ts
+```
 
 ## Contributors ✨
 
@@ -60,6 +45,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
