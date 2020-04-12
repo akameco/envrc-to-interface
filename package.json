@@ -1,6 +1,6 @@
 {
   "name": "envrc-to-interface",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "your .envrc to TypeScript interface",
   "license": "MIT",
   "repository": "akameco/envrc-to-interface",
