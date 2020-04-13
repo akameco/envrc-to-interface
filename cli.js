@@ -13,6 +13,17 @@ const cli = meow(`
 
 `)
 
-const file = fs.readFileSync(cli.input[0], 'utf8')
+const input = cli.input[0]
+
+if (!input) {
+  console.log('required .envrc')
+  console.log(`
+  Examples
+  $ envrc-to-interface .envrc
+  `)
+  process.exit(1)
+}
+
+const file = fs.readFileSync(input, 'utf8')
 const outoput = envrcToInterface(file)
 console.log(outoput)
