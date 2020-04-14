@@ -6,10 +6,9 @@
   "repository": "akameco/envrc-to-interface",
   "author": "akameco <akameco.t@gmail.com> (https://akameco.github.io)",
   "files": [
-    "dest",
-    "cli.js"
+    "dest"
   ],
-  "bin": "cli.js",
+  "bin": "dest/cli.js",
   "main": "dest/index.js",
   "types": "dest/index.d.ts",
   "keywords": [

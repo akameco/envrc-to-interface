@@ -1,8 +1,8 @@
 #!/usr/bin/env node
-'use strict'
-const fs = require('fs')
-const meow = require('meow')
-const envrcToInterface = require('./dest').default
+/* eslint-disable no-console */
+import fs from 'fs'
+import meow from 'meow'
+import envrcToInterface from '.'
 
 const cli = meow(`
   Usage
